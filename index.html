@@ -41,6 +41,15 @@
 </head>
 
 <body>
+    <a href="index copy.html" style="width: 100%;bottom: 0;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;">
+        <button style="position: absolute;z-index: 1;bottom: 35px;height: 50px;
+        width: 200px;">Go outside</button></a>
+    <h1 style="color: white;position: absolute;z-index: 1;bottom: 0;height: 50px;
+        width: 100%;">Press Esc to detach camera.</h1>
     <canvas id="renderCanvas"></canvas>
     <script>
         var canvas = document.getElementById("renderCanvas");
@@ -621,7 +630,8 @@
                 for (i in importedMeshes) {
                     importedMeshes[i].checkCollisions = true;
                     // console.log(i);
-                    scene.getMeshByID("__root__").position = new BABYLON.Vector3(10, 0, 8)
+                    scene.getMeshByID("__root__").position = new BABYLON.Vector3(8, 0, 8)
+                    scene.getMeshByID("__root__").rotation = new BABYLON.Vector3(0, 5, 0)
                 }
             });
 
