@@ -37,10 +37,25 @@
             height: 100%;
             touch-action: none;
         }
+
+        #fps {
+                position: absolute;
+                background-color: black;
+                border: 2px solid red;
+                text-align: center;
+                font-size: 16px;
+                color: white;
+                top: 15px;
+                right: 10px;
+                width: 60px;
+                height: 20px;
+            }
     </style>
 </head>
 
 <body>
+    <div id="fps">0</div>
+
     <canvas id="renderCanvas"></canvas>
         <a href="index.html" style="width: 100%;bottom: 0;
     border: 1px solid black;
@@ -66,6 +81,7 @@
         var engine = null;
         var scene = null;
         var sceneToRender = null;
+        let divFps = document.getElementById("fps");
         var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
         //Made by TheNosiriN
         // its not complete, it has some bugs, but its still useable
@@ -341,6 +357,7 @@
                 deltaTime = engine.getDeltaTime();
 
                 updateCamera();
+                divFps.innerHTML = engine.getFps().toFixed() + " fps";
 
                 if (character != null) {
                     var keyboard = dsm.getDeviceSource(BABYLON.DeviceType.Keyboard);
