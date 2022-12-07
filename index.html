@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;">
-        <button style="position: absolute;z-index: 1;bottom: 35px;height: 50px;
+        <button style="position: absolute;z-index: 100;bottom: 35px;height: 50px;
         width: 200px;">Go outside</button></a>
     <h1 style="color: white;position: absolute;z-index: 1;bottom: 0;height: 50px;
         width: 100%;">Press Esc to detach camera.</h1>
@@ -272,7 +272,7 @@
                 body.material = new BABYLON.StandardMaterial("character", scene);
                 joints.material = new BABYLON.StandardMaterial("joints", scene);
                 body.material.diffuseColor = new BABYLON.Color3(0.81, 0.24, 0.24);
-                joints.material.emissiveColor = new BABYLON.Color3(0.19, 0.29, 0.44);
+                // joints.material.emissiveColor = new BABYLON.Color3(0.19, 0.29, 0.44);
 
 
                 addToMirror(character);
