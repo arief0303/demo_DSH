@@ -36,21 +36,21 @@
             width: 100%;
             height: 100%;
             touch-action: none;
-            
+
         }
 
         #fps {
-                position: absolute;
-                background-color: black;
-                border: 2px solid red;
-                text-align: center;
-                font-size: 16px;
-                color: white;
-                top: 15px;
-                right: 10px;
-                width: 60px;
-                height: 20px;
-            }
+            position: absolute;
+            background-color: black;
+            border: 2px solid red;
+            text-align: center;
+            font-size: 16px;
+            color: white;
+            top: 15px;
+            right: 10px;
+            width: 60px;
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -75,7 +75,7 @@
                     sceneToRender.render();
                 }
             });
-            
+
         }
 
         var engine = null;
@@ -83,8 +83,6 @@
         var sceneToRender = null;
         let divFps = document.getElementById("fps");
         var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
-        //Made by TheNosiriN
-        // its not complete, it has some bugs, but its still useable
 
 
         const m4URL = 'https://raw.githubusercontent.com/TheNosiriN/Babylon-Assets/master/m4a1.obj';
